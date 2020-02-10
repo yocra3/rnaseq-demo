@@ -10,6 +10,7 @@ params.outdir = 'results'
 /* 
  * prints user convenience 
  */
+println "COOOOOOT"
 println "R N A T O Y   P I P E L I N E    "
 println "================================="
 println "genome             : ${params.genome}"
