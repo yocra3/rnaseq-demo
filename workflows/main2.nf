@@ -2,6 +2,9 @@
  * Defines some parameters in order to specify the refence genomes
  * and read pairs by using the command line options
  */
+
+baseDir=./
+
 params.reads = "$baseDir/data/ggal/reads/ggal_gut_{1,2}.fq"
 params.annot = "$baseDir/data/ggal/annotation.gff"
 params.genome = "$baseDir/data/ggal/genome.fa"
