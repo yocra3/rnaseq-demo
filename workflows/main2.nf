@@ -13,12 +13,18 @@ params.outdir = 'results'
 /* 
  * prints user convenience 
  */
-println "COOOOOOT"
 println "R N A T O Y   P I P E L I N E    "
 println "================================="
 println "genome             : ${params.genome}"
 println "annotat            : ${params.annot}"
 println "reads              : ${params.reads}"
+
+println "Pipeline details"
+println "================================="
+println "Manifest's pipeline version: $workflow.manifest.version"println "Project : $workflow.projectDir"
+println "Git info: $workflow.repository - $workflow.revision [$workflow.commitId]"
+println "Cmd line: $workflow.commandLine"
+println "Manifest's pipeline version: $workflow.manifest.version"
 
 
 /*
