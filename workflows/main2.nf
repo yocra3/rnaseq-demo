@@ -21,10 +21,19 @@ println "reads              : ${params.reads}"
 
 println "Pipeline details"
 println "================================="
-println "Manifest's pipeline version: $workflow.manifest.version"println "Project : $workflow.projectDir"
+println "Manifest's pipeline version: $workflow.manifest.version"
+println "Project : $workflow.projectDir"
 println "Git info: $workflow.repository - $workflow.revision [$workflow.commitId]"
 println "Cmd line: $workflow.commandLine"
 println "Manifest's pipeline version: $workflow.manifest.version"
+
+
+logf = file("$baseDir/${params.outdir}/log.txt")
+logf.text = "Manifest's pipeline version: $workflow.manifest.version\n"
+logf << "Project : $workflow.projectDir\n"
+logf << "Git info: $workflow.repository - $workflow.revision [$workflow.commitId]\n"
+logf << "Cmd line: $workflow.commandLine\n"
+
 
 
 /*
@@ -91,5 +100,4 @@ process makeTranscript {
     mv transcripts.gtf transcript_${pair_id}.gtf
     """
 }
-
 
